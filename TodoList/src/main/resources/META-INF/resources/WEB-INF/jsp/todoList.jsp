@@ -3,11 +3,11 @@
 	<%@ include file="common/navigation.jspf" %> 
 	
 		<div class="container">
-			<h1>Your Todos are </h1>
+			<h1>${name} manage your Todos here: </h1>
+			<br>
 			<table class="table">
 				<thead>
 					<tr>
-						<th>Id</th>
 						<th>Description</th>
 						<th>End Date</th>
 						<th>Status</th>
@@ -18,7 +18,6 @@
 				<tbody>		
 					<c:forEach items="${todos}" var="todo">
 						<tr>
-							<td>${todo.id}</td>
 							<td>${todo.description}</td>
 							<td>${todo.endDate}</td>
 							<td>${todo.status}</td>

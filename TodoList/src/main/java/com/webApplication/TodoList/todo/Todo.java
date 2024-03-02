@@ -2,10 +2,20 @@ package com.webApplication.TodoList.todo;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Size;
 
+@Entity
 public class Todo {
 	
+	public Todo() {
+		
+	}
+	
+	@Id
+	@GeneratedValue
 	private int id;
 	private String username;
 	
@@ -13,6 +23,7 @@ public class Todo {
 	private String description;
 	private LocalDate endDate;
 	private boolean status;
+	
 	
 	
 	
